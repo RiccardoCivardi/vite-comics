@@ -14,8 +14,18 @@
     justify-content: space-between;
   }
 
+  @else if $type =='around' {
+    justify-content: space-around;
+  }
+
+  @else if $type =='aroundCenter' {
+    justify-content: space-around;
+    align-items: center;
+  }
+
   @else if $type =='center' {
     justify-content: center;
     align-items: center;
   }
+
 }
