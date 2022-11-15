@@ -1,0 +1,21 @@
+@mixin dFlexRow($type: 'center') {
+
+  display: flex;
+
+  @if $type =='alignCenter' {
+    align-items: center;
+  }
+
+  @else if $type =='justifyCenter' {
+    justify-content: center;
+  }
+
+  @else if $type =='between' {
+    justify-content: space-between;
+  }
+
+  @else if $type =='center' {
+    justify-content: center;
+    align-items: center;
+  }
+}
