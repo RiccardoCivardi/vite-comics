@@ -25,7 +25,7 @@ export default {
           text: 'Comic shop locator'
         },
         {
-          name: 'bbuy-dc-power-visa.svg',
+          name: 'buy-dc-power-visa.svg',
           text: 'Dc power visa'
         }
       ]
