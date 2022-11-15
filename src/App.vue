@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppIcons from './components/AppIcons.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppFooterSocial from './components/AppFooterSocial.vue';
 
 export default {
   name: 'App',
@@ -12,7 +13,8 @@ export default {
     AppHeader,
     AppMain,
     AppIcons,
-    AppFooter
+    AppFooter,
+    AppFooterSocial
   }
 }
 
@@ -27,6 +29,8 @@ export default {
   <AppIcons/>
 
   <AppFooter/>
+
+  <AppFooterSocial/>
   
 </template>
 

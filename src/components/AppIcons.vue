@@ -94,6 +94,7 @@ export default {
       .text {
         text-transform: uppercase;
         color: $text-light;
+        font-size: 1.1rem;
       }
     }
   }
