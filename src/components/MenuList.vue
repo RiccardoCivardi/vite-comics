@@ -33,6 +33,9 @@ ul {
       text-decoration: none;
       color: lighten($bg-dark, 40%);
       font-size: 0.8rem;
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }

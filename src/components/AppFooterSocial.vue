@@ -55,12 +55,17 @@ export default {
     .sign-up {
       border: 2px solid $primary-color;
       padding: 10px;
+      cursor: pointer;
+      transition: all 1s;
       a {
         font-size: 1.3rem;
         font-weight: 500;
         color: $text-light;
         text-transform: uppercase;
         text-decoration: none;
+      }
+      &:hover {
+        background-color: $primary-color;
       }
     }
     .social {
@@ -73,6 +78,9 @@ export default {
       text-transform: uppercase;
       font-weight: bold;
       color: $primary-color;
+      }
+      img:hover {
+        filter: brightness(2);
       }
     }
   }

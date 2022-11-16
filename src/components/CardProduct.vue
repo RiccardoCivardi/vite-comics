@@ -34,7 +34,7 @@ export default {
 
 .card {
   flex-basis: calc(100% / 6);
-  padding: 15px;
+  padding: 15px 15px 25px;
   .image {
     width: 100%;
     margin-bottom: 15px;
@@ -48,6 +48,9 @@ export default {
     font-weight: 400;
     text-transform: uppercase;
     color: $text-light;
+  }
+  img, h4 {
+    cursor: pointer;
   }
 }
 

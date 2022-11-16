@@ -92,6 +92,9 @@ export default {
         color: $text-light;
         font-size: 1.1rem;
       }
+      .image, .text {
+        cursor: pointer;
+      }
     }
   }
 }

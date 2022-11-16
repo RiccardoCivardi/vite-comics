@@ -17,10 +17,11 @@ export default {
   data(){
     return{
 
-      dcComics
+      dcComics,
+      title: 'Current series',
 
     }
-  }
+  },
 
 }
 
@@ -30,13 +31,23 @@ export default {
   
   <main>
     <div class="container">
-      
-      <CardProduct
-        v-for="(comic, index) in dcComics" :key="index" 
-        :img="comic.thumb"
-        :text="comic.series"
-      />
 
+      <h2>{{title}}</h2>
+
+      <div class="card">
+
+        <CardProduct
+          v-for="(comic, index) in dcComics" :key="index" 
+          :img="comic.thumb"
+          :text="comic.series"
+        />
+
+      </div>
+
+      <div class="button">
+        <button>Load more</button>
+      </div>
+      
     </div>
   </main>
 
@@ -50,8 +61,22 @@ export default {
   main {
     background-color: $secondary-color;
     .container {
-      @include dFlexRow(wrap);
-
+      padding: 50px 0 20px;
+      position: relative;
+      h2 {
+        @include boxRectangleText(title);
+        position: absolute;
+        top: -30px;
+      }
+      .card {
+        @include dFlexRow(wrap);
+      }
+      .button {
+        text-align: center;
+        button {
+          @include boxRectangleText(btnSmall);
+        }
+      }
     }
     
   }
