@@ -167,10 +167,6 @@ export default {
 
       </nav>
 
-      <div class="image">
-        <img src="../assets/img/dc-logo-bg.png" alt="Logo DC">
-      </div>
-
     </div> 
    
     <AppFooterSocial/>
@@ -186,13 +182,15 @@ export default {
 
 footer{
   height: $footer-height;
-  height: calc($footer-height - $social-footer-height);
   background-image: url('../assets/img/footer-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   .container {
     height: 100%;
-    @include dFlexRow(between);
+    height: calc($footer-height - $social-footer-height);
+    background-image: url('../assets/img/dc-logo-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
     .footer-menu {
       display: flex;
       padding: 40px 0;
@@ -215,16 +213,6 @@ footer{
         }
       }
     }  
-    .image {
-      width: 560px;
-      height: 100%;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
   } 
 }
 
