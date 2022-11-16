@@ -1,5 +1,8 @@
 <script>
 
+import socialIcons from '../data/social';
+import {getImagePath} from '../data/methods';
+
 export default {
 
   name: 'AppFooterSocial',
@@ -7,44 +10,11 @@ export default {
   data(){
     return{
 
-      socialIcons: [
-        {
-          name: 'footer-facebook.png',
-          href: '#',
-          alt: 'Facebook'
-        },
-        {
-          name: 'footer-twitter.png',
-          href: '#',
-          alt: 'Twitter'
-        },
-        {
-          name: 'footer-youtube.png',
-          href: '#',
-          alt: 'Youtube'
-        },
-        {
-          name: 'footer-pinterest.png',
-          href: '#',
-          alt: 'Pinterest'
-        },
-        { 
-          name: 'footer-periscope.png',
-          href: '#',
-          alt: 'Periscope'
-        }
-      ]
+      socialIcons,
+      getImagePath
 
     }
   },
-
-  methods: {
-
-    getImagePath(imageName){
-    return new URL(`../assets/img/${imageName}`, import.meta.url).href
-    }
-
-  }
 
 }
 

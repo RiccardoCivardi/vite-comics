@@ -1,129 +1,31 @@
 <script>
 
+import MenuList from './MenuList.vue';
 import AppFooterSocial from './AppFooterSocial.vue';
+
+import {dcComicsMenu, shopMenu, DcMenu, SitesMenu} from '../data/menu';
 
 export default {
 
   name: 'AppFooter',
 
   components: {
-    AppFooterSocial
+
+    MenuList,
+    AppFooterSocial,
+
   },
 
   data(){
     return{
 
-      dcComicsMenu:[
-        {
-          text: 'Characters',
-          href: '#'
-        },
-        {
-          text: 'Comics',
-          href: '#'
-        },
-        {
-          text: 'Movies',
-          href: '#'
-        },
-        {
-          text: 'TV',
-          href: '#'
-        },
-        {
-          text: 'Games',
-          href: '#'
-        },
-        {
-          text: 'Videos',
-          href: '#'
-        },
-        {
-          text: 'News',
-          href: '#'
-        }
-      ],
+      dcComicsMenu,
 
-      shopMenu: [
-        {
-          text: 'Shop DC',
-          href: '#'
-        },
-        {
-          text: 'Shop DC Collectibles',
-          href: '#'
-        }
-      ],
+      shopMenu,
 
-      DcMenu: [
-        {
-          text: 'Terms of Use',
-          href: '#'
-        },
-        {
-          text: 'Privacy policy(New)',
-          href: '#'
-        },
-        {
-          text: 'Ad Choices',
-          href: '#'
-        },
-        {
-          text: 'Advertising',
-          href: '#'
-        },
-        {
-          text: 'Jobs',
-          href: '#'
-        },
-        {
-          text: 'Subscriptions',
-          href: '#'
-        },
-        {
-          text: 'Talent Workshop',
-          href: '#'
-        },
-        {
-          text: 'CPSC Certificates',
-          href: '#'
-        },
-        {
-          text: 'Ratings',
-          href: '#'
-        },
-        {
-          text: 'Shop Help',
-          href: '#'
-        },
-        {
-          text: 'Contact Us',
-          href: '#'
-        }
-      ],
+      DcMenu,
 
-      SitesMenu: [
-        {
-          text: 'DC',
-          href: '#'
-        },
-        {
-          text: 'MAD Magazine',
-          href: '#'
-        },
-        {
-          text: 'DC kids',
-          href: '#'
-        },
-        {
-          text: 'DC Universe',
-          href: '#'
-        },
-        {
-          text: 'DC Power Visa',
-          href: '#'
-        }
-      ]
+      SitesMenu
 
     }
   }
@@ -142,27 +44,19 @@ export default {
 
         <div class="col">
           <h3>Dc comics</h3>
-          <ul>
-            <li v-for="(link, index) in dcComicsMenu" :key="index"><a href="link.href">{{link.text}}</a></li>
-          </ul>
+          <MenuList :objectMenu="dcComicsMenu" />
           <h3>Shop</h3>
-          <ul>
-            <li v-for="(link, index) in shopMenu" :key="index"><a href="link.href">{{link.text}}</a></li>
-          </ul>
+          <MenuList :objectMenu="shopMenu" />
         </div>
 
         <div class="col">
           <h3>Dc</h3>
-          <ul>
-            <li v-for="(link, index) in  DcMenu" :key="index"><a href="link.href">{{link.text}}</a></li>
-          </ul>
+          <MenuList :objectMenu="DcMenu" />
         </div>
 
         <div class="col">
           <h3>Sites</h3>
-          <ul>
-            <li v-for="(link, index) in  SitesMenu" :key="index"><a href="link.href">{{link.text}}</a></li>
-          </ul>
+          <MenuList :objectMenu="SitesMenu" />
         </div>
 
       </nav>
@@ -177,7 +71,6 @@ export default {
 
 <style lang="scss" scoped>
 
-@use '../style/partials/mixin' as *;
 @use '../style/partials/variables' as *;
 
 footer{
@@ -199,17 +92,6 @@ footer{
         h3 {
           color: $text-light;
           text-transform: uppercase;
-        }
-        h3, ul {
-          margin-bottom: 15px;
-        }
-        li {
-          margin-bottom: 5px;
-          a {
-            text-decoration: none;
-            color: lighten($bg-dark, 40%);
-            font-size: 0.8rem;
-          }
         }
       }
     }  

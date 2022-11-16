@@ -1,11 +1,15 @@
 <script>
 
+import {getImagePath} from '../data/methods';
+
 export default {
  
   name: 'AppIcons',
 
   data(){
     return {
+
+      getImagePath,
 
       icons: [
         {
@@ -31,14 +35,6 @@ export default {
       ]
 
     }
-  },
-
-  methods: {
-
-    getImagePath(imageName){
-      return new URL(`../assets/img/${imageName}`, import.meta.url).href
-    }
-
   }
 
 }
