@@ -28,6 +28,10 @@
     align-items: center;
   }
 
+  @else if $type == 'wrap' {
+    flex-wrap: wrap;
+  }
+
   @else if $type =='center' {
     justify-content: center;
     align-items: center;

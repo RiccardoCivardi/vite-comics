@@ -1,14 +1,42 @@
 <script>
+
+import CardProduct from './CardProduct.vue'; 
+
+import dcComics from '../data/dc-comics';
+
 export default {
-  name: 'AppMain'
+
+  name: 'AppMain',
+
+  components: {
+
+    CardProduct
+
+  },
+
+  data(){
+    return{
+
+      dcComics
+
+    }
+  }
+
 }
+
 </script>
 
 <template>
   
   <main>
     <div class="container">
-      <p> --> Content goes here</p>
+      
+      <CardProduct
+        v-for="(comic, index) in dcComics" :key="index" 
+        :img="comic.thumb"
+        :text="comic.series"
+      />
+
     </div>
   </main>
 
@@ -20,12 +48,12 @@ export default {
   @use '../style/partials/variables' as *;
 
   main {
-    height: $header-height;
     background-color: $secondary-color;
-    font-size: 1.5rem;
-    color: $text-light;
-    font-weight: bold;
-    @include dFlexRow(alignCenter);
+    .container {
+      @include dFlexRow(wrap);
+
+    }
+    
   }
 
 </style>
